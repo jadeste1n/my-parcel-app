@@ -1,0 +1,7 @@
+
+{
+    "_comment": "This file tells postcss to transform our CSS and bring the necessary Tailwind utilities. https://www.freecodecamp.org/news/comments-in-json/",
+    "plugins": {
+      "tailwindcss": {}
+    }
+  }
