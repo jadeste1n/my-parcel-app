@@ -67,7 +67,7 @@ async function getPokemon() {
     const marker = document.getElementById('map');
     const pokemon = document.createElement("img");
 
-    pokemon.setAttribute(src, `${pokemon.sprites.front_default}`);
+    pokemon.setAttribute('src', `${pokemon.sprites.front_default}`);
     marker.appendChild(pokemon)
   } catch (error) {
     console.error(error);
