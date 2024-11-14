@@ -1,7 +1,9 @@
 //import leaflet -> console log object to see if it worked
 import * as Leaflet from 'leaflet';
+import axios from 'axios';
  
 console.log(Leaflet);
+console.log(axios);
 
 //create map
 import Leaflet from 'leaflet'; // import everything from leaflet
