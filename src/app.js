@@ -64,19 +64,23 @@ async function getPokemon() {
     const response = await axios.get('https://pokeapi.co/api/v2/pokemon/ditto');
     console.log(response);
 
-    const marker = document.getElementById('map');
-    const pokemon = document.createElement("img");
-
-    pokemon.setAttribute('src', `${pokemon.sprites.front_default}`);
-    marker.appendChild(pokemon)
+    const marker = document.querySelector('.container');
+    
+    // Check if marker exists in the HTML before proceeding
+    if (marker) {
+      // Create an image element
+      const pokemon = document.createElement('img');
+      
+      // Set the 'src' attribute to the sprite's UR L
+      pokemon.setAttribute("src", response.data.sprites.front_default);
+      
+      // Append the image to the marker element
+      marker.appendChild(pokemon);
+    } else {
+      console.error("Element with id 'map' not found in the HTML.");
+    }
   } catch (error) {
     console.error(error);
-    iziToast.error({
-      title: 'Error',
-      message: 'Illegal operation',
-  });
-  
-
   }
 }
 
