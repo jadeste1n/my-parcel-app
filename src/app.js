@@ -63,7 +63,15 @@ async function getPokemon() {
   try {
     const response = await axios.get('https://pokeapi.co/api/v2/pokemon/ditto');
     console.log(response);
+
+    const marker = document.getElementById('map');
+    const pokemon = document.create("img");
+
+    pokemon.setAttribute(src, `${pokemon.sprites.front_default}`);
+    marker.appendChild(pokemon)
   } catch (error) {
     console.error(error);
   }
 }
+
+getPokemon();
