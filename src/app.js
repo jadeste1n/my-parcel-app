@@ -65,12 +65,18 @@ async function getPokemon() {
     console.log(response);
 
     const marker = document.getElementById('map');
-    const pokemon = document.create("img");
+    const pokemon = document.createElement("img");
 
     pokemon.setAttribute(src, `${pokemon.sprites.front_default}`);
     marker.appendChild(pokemon)
   } catch (error) {
     console.error(error);
+    iziToast.error({
+      title: 'Error',
+      message: 'Illegal operation',
+  });
+  
+
   }
 }
 
