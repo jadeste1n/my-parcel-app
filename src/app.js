@@ -56,3 +56,14 @@ myLocations.forEach(location => {
   // Set the view to the bounds of all markers
 const bounds = Leaflet.latLngBounds(myLocations.map(location => location.location));
 map.fitBounds(bounds);
+
+
+/// working with axios and pokemon
+async function getPokemon() {
+  try {
+    const response = await axios.get('https://pokeapi.co/api/v2/pokemon/ditto');
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+}
